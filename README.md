@@ -13,6 +13,8 @@ This project contains a user guide for the Avimesa Gateway for Raspberry Pi.
     - [1.1 Summary](#1.1-summary)
     - [1.2 Requirements](#1.2-requirements)
 - [2. Quick Start](#2.-quick-start)
+    - [2.1 Quick Start (Wi-Fi)](#2.1-quick-start-wifi)
+    - [2.2 Quick Start (Ethernet)](#2.2-quick-start-eth)
 - [3. Power Supply](#3.-power-supply)
 - [4. Gateway Modes](#4.-gw-modes)
     - [4.1 Unconfigured Network](#4.1-gw-modes-unconfigured)
@@ -21,13 +23,16 @@ This project contains a user guide for the Avimesa Gateway for Raspberry Pi.
 - [5. Gateway Setup](#5.-gw-setup)
     - [5.1 How to Enter Gateway Setup Mode](#5.1-gw-setup-how-to-enter)
     - [5.2 Using the Gateway Setup Application](#5.2-gw-setup-app)
-    
+- [6. Gateway Software Updates](#6.-gw-updates)    
     
     
 
 [Top](#toc)<br>
 <a id="1.-overview"></a>
 ## 1. Overview
+
+<a id="1.1-summary"></a>
+## 1.1 Summary
 
 The Avimesa Gateway for Raspberry Pi is used to facilitate network communications between Avimesa devices and the Avimesa Device Cloud.
 
@@ -43,32 +48,52 @@ Figure 1 calls out the main components that are used in this guide:
 &nbsp;&nbsp;&nbsp; A. Gateway Status LED<br>
 &nbsp;&nbsp;&nbsp; B. Gateway Setup Button<br>
 &nbsp;&nbsp;&nbsp; C. Power Connector<br>
+&nbsp;&nbsp;&nbsp; D. Ethernet Port<br>
 
 ![ug-gw-callouts](images/ug-gw-callouts.png)
 <br>*Figure 1*
 
-<a id="1.1-requirements"></a>
+<a id="1.2-requirements"></a>
 ## 1.2 Requirements
+
+For Wi-Fi use:
 
 1. A computer with Wi-Fi
 2. The Avimesa Gateway for Raspberry Pi and power supply
-3. A network with an internet connection
+3. A wireless network with an internet connection
+
+For Ethernet use:
+
+1. Ethernet cable and network with an internet connection
+2. The Avimesa Gateway for Raspberry Pi and power supply
+
 
 
 [Top](#toc)<br>
 <a id="2.-quick-start"></a>
-## 2. Quick Start (Wi-Fi)
+## 2. Quick Start
+
+
+<a id="2.1-quick-start-wifi"></a>
+## 2.1 Quick Start (Wi-Fi)
 
 For the first time setup, do the following:
 
 1. Attach the power supply to the Gateway (Figure 1-C)
-2. The Gateway will boot up and the `Gateway Status LED` (Figure 1-A) will flash green as it's in the `Unconfigured` state.
-3. Press and hold the `Gateway Setup Button` (Figure 1-B) for 10 seconds until the `Gateway Status LED` (Figure 1-A) turns red.
-4. Using a computer with Wi-Fi, connect to the "Avimesa-Gateway" Access Point, no password is required.
-5. Enter the SSID and password for the network that you want the Gateway to connect to.
-6. Press "Save" to reset the Gateway.  It will automatically connect to the configured network.
+2. The Gateway will boot up and the `Gateway Status LED` (Figure 1-A) will **flash green** as it's in the `Unconfigured` state.
+3. **Press and hold** the `Gateway Setup Button` (Figure 1-B) for 10 seconds until the `Gateway Status LED` (Figure 1-A) **turns solid red**.
+4. Using a computer with Wi-Fi, connect to the **"Avimesa-Gateway"** Access Point, **no password** is required.
+5. Using a browser, enter the address **192.168.0.1** in the address bar and hit <ENTER>
+6. Enter the SSID and password for the network that you want the Gateway to connect to.
+7. Press "Save" to reset the Gateway.  It will automatically connect to the configured network and the Gateway Status LED` (Figure 1-A) will turn **solid green**
 
+<a id="2.2-quick-start-eth"></a>
+## 2.1 Quick Start (Ethernet)
 
+1. Attach an ethernet cable to the ethernet port (Figure 1-D)
+2. Attach the power supply to the Gateway (Figure 1-C)
+
+When using ethernet, the `Gateway Status LED` (Figure 1-A) and the `Gateay Setup Button` (Figure 1-B) are **not used**.
 
 
 [Top](#toc)<br>
@@ -81,7 +106,7 @@ The Avimesa Gateway for Raspberry Pi kit comes with a power supply that is rated
 
 [Top](#toc)<br>
 <a id="4.-gw-modes"></a>
-## 4. Gateway Modes
+## 4. Gateway Modes (Wi-Fi)
 
 The Gateway can be in three modes that are directly related to it's Wi-Fi network status. 
 
@@ -104,7 +129,7 @@ The `Gateway Status LED` (Figure 1-A) will be **solid red** when in this state.
 
 The Gateway Router Daemon will not run when in the state as it requires a network connection.  Thus, any Avimesa devices utilizing this gateway for network connectivity will fail to synchronize with the Avimesa Device Cloud.
 
-<a id="4.3-gw-modes-gw-setup"></a>
+<a id="4.3-gw-modes-configured"></a>
 ## 4.3 Configured
 
 When in the `Cconfigured` mode, the Gateway is setup and has connected to a configured Access Point. 
@@ -150,6 +175,14 @@ The Gateway will reboot and attempt to connect to the network that was configure
 If the `Gateway Status LED` (Figure 1-A) turns to **solid green** after the reboot, the connection was successful.
 
 If the `Gateway Status LED` (Figure 1-A) turns to **blinking green** after the reboot, the connection was unsuccessful and the process needs to be repeated starting at step 1.  Ensure the correct password was used. 
+
+
+
+
+[Top](#toc)<br>
+<a id="6.-gw-updates"></a>
+## 6. Gateway Software Updates
+The Avimesa Gateway for Raspberry Pi features an automatic update mechanism that will update the gateway as necessary.  When this occurs, the gateway may become inactive for a few minutes until the update completes.
 
 
 
