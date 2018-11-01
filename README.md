@@ -1,6 +1,6 @@
 # Avimesa Gateway for Raspberry Pi User Guide
 
-
+last updated 2018-Nov-1
 
 ## Introduction
 
@@ -12,6 +12,7 @@ This project contains a user guide for the Avimesa Gateway for Raspberry Pi.
 - [1. Overview](#1.-overview)
     - [1.1 Summary](#1.1-summary)
     - [1.2 Requirements](#1.2-requirements)
+    - [1.3 Interface](#1.3-interface)
 - [2. Quick Start](#2.-quick-start)
     - [2.1 Quick Start (Wi-Fi)](#2.1-quick-start-wifi)
     - [2.2 Quick Start (Ethernet)](#2.2-quick-start-eth)
@@ -36,22 +37,15 @@ This project contains a user guide for the Avimesa Gateway for Raspberry Pi.
 
 The Avimesa Gateway for Raspberry Pi is used to facilitate network communications between Avimesa devices and the Avimesa Device Cloud.
 
-In general, it simply provides:
+In general, the Gateway:
 
-1. Ability to configure the Gateway to connect to a Wi-Fi network
-2. Once configured to a network, automatic Avimesa device discovery and connection mechanisms
+1. Provides a quick and easy way to connect the gateway to a Wi-Fi network
+2. Performs automatic Avimesa device discovery and connection with no setup required
+3. Has a simple LED status showing network state for easy troubleshooting
+4. Supports up to 6 simultaneous connections, more with multiplexing
+5. Features automatic software updates 
 
-After the intitial setup, no other actions should be required.
-
-Figure 1 calls out the main components that are used in this guide:
-
-&nbsp;&nbsp;&nbsp; A. Gateway Status LED<br>
-&nbsp;&nbsp;&nbsp; B. Gateway Setup Button<br>
-&nbsp;&nbsp;&nbsp; C. Power Connector<br>
-&nbsp;&nbsp;&nbsp; D. Ethernet Port<br>
-
-![ug-gw-callouts](images/ug-gw-callouts.png)
-<br>*Figure 1*
+After the initial setup, no other actions should be required.
 
 <a id="1.2-requirements"></a>
 ## 1.2 Requirements
@@ -66,6 +60,20 @@ For Ethernet use:
 
 1. Ethernet cable and network with an internet connection
 2. The Avimesa Gateway for Raspberry Pi and power supply
+
+
+<a id="1.3-interface"></a>
+## 1.3 Interface
+
+Figure 1 calls out the main components that are used in this guide:
+
+&nbsp;&nbsp;&nbsp; A. Gateway Status LED<br>
+&nbsp;&nbsp;&nbsp; B. Gateway Setup Button<br>
+&nbsp;&nbsp;&nbsp; C. Power Connector<br>
+&nbsp;&nbsp;&nbsp; D. Ethernet Port<br>
+
+![ug-gw-callouts](images/ug-gw-callouts.png)
+<br>*Figure 1*
 
 
 
@@ -99,7 +107,7 @@ When using ethernet, the `Gateway Status LED` (Figure 1-A) and the `Gateay Setup
 [Top](#toc)<br>
 <a id="3.-power-supply"></a>
 ## 3. Power Supply
-The Avimesa Gateway for Raspberry Pi kit comes with a power supply that is rated for use.
+The Avimesa Gateway for Raspberry Pi kit comes with a power supply that is rated for use (2.5A USB Power Supply with Micro USB Cable and Noise Filter)
 
 
 
